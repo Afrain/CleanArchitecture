@@ -1,0 +1,12 @@
+#!/bin/sh
+# Format code before commit
+
+dotnet format
+STATUS=$?
+
+if [ $STATUS -ne 0 ]; then
+  echo "dotnet format failed. Fix the issues and try again."
+  exit 1
+fi
+
+exit 0
