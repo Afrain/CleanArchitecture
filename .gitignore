@@ -1,0 +1,38 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+.nuget/packages/
+
+# Test results
+TestResults/
+*.trx
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
