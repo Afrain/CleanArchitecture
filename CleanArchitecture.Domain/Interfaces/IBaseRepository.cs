@@ -7,8 +7,8 @@ namespace CleanArchitecture.Domain.Interfaces
     {
         Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken);
         Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellation);
-        Task AddAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(Guid id);
+        void Save(T entity);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }
