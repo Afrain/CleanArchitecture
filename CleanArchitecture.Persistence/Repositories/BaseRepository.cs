@@ -25,7 +25,7 @@ namespace CleanArchitecture.Persistence.Repositories
             return await _appDbContext.Set<T>().ToListAsync(cancellation);
         }
 
-        public void Save(T entity)
+        public void Create(T entity)
         {
             entity.DateCreated = DateTime.UtcNow;
             _appDbContext.Add(entity);

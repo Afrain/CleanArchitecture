@@ -12,7 +12,7 @@ namespace CleanArchitecture.Persistence.Repositories
             _appDbContext = appDbContext;
         }
 
-        public async Task CommitAsync(CancellationToken cancellationToken)
+        public async Task Commit(CancellationToken cancellationToken)
         {
             await _appDbContext.SaveChangesAsync(cancellationToken);
         }
