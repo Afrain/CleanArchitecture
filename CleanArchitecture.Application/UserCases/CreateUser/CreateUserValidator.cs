@@ -6,7 +6,7 @@ namespace CleanArchitecture.Application.UserCases.CreateUser
     {
         public CreateUserValidator()
         {
-            RuleFor(x => x.Nome)
+            RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Nome é obrigatório.")
                 .MinimumLength(3).WithMessage("Nome deve ter no minimo 3 caracteres.")
                 .MaximumLength(50).WithMessage("Nome deve ter no máximo 50 caracteres.");

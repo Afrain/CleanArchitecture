@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Shared\Behavior\" />
     <Folder Include="Shared\Exceptions\" />
     <Folder Include="UserCases\DeleteUser\" />
     <Folder Include="UserCases\GetAllUser\" />
