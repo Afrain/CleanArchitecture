@@ -7,8 +7,8 @@ namespace CleanArchitecture.Application.UserCases.CreateUser
     {
         public CreateUserMapper()
         {
-            CreateMap<CreateUserRequest, User>()
-                .ConstructUsing(request => new User(request.Name, request.Email));
+            CreateMap<CreateUserRequest, User>();
+                //.ConstructUsing(request => new User(request.Name, request.Email));
 
             CreateMap<User, CreateUserResponse>();
         }
