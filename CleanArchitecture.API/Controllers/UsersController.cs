@@ -1,4 +1,5 @@
 ﻿using CleanArchitecture.Application.UserCases.CreateUser;
+using CleanArchitecture.Application.UserCases.DeleteUser;
 using CleanArchitecture.Application.UserCases.GetAllUser;
 using CleanArchitecture.Application.UserCases.UpdateUser;
 using MediatR;
@@ -40,5 +41,13 @@ namespace CleanArchitecture.API.Controllers
             return Ok(response);
         }
 
-    }
+        [HttpDelete]
+        public async Task<ActionResult> DeleteUser(Guid id, CancellationToken cancellationToken)
+        {
+            if (id == Guid.Empty) return BadRequest();
+
+            var response = await _mediator.Send(new DeleteUserRequest { Id = id }, cancellationToken);
+            return Ok(response);
+
+        }
 }
